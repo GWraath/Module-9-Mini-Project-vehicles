@@ -1,4 +1,4 @@
-drop table vehicles;
+drop table if exists vehicles;
 
 CREATE TABLE vehicles (
   `MakeId` int NOT NULL,

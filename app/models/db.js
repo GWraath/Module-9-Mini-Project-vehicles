@@ -9,12 +9,7 @@ var connection = mysql.createPool({
   dialect: dbConfig.dialect,
   port: dbConfig.port,
   operatorsAliases: false,
-  pool: {
-    max: dbConfig.pool.max,
-    min: dbConfig.pool.min,
-    acquire: dbConfig.pool.acquire,
-    idle: dbConfig.pool.idle
-  }  
+  multipleStatements: true
 });
 
 module.exports = connection;
